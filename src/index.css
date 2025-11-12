@@ -61,11 +61,11 @@ body {
 
 @layer components {
     main {
-        @apply w-full overflow-x-hidden;
+        @apply w-full overflow-x-hidden top-0 left-0;
     }
 
     nav {
-        @apply fixed z-50 w-full;
+        @apply fixed z-50 w-screen;
 
         div {
             @apply flex md:flex-row flex-col md:justify-between items-center gap-5 py-5 lg:px-0 px-5 container mx-auto;
@@ -80,7 +80,7 @@ body {
         }
 
         ul {
-            @apply flex-center lg:gap-12 gap-7;
+            @apply flex flex-center gap-7 lg:gap-12
         }
     }
 
