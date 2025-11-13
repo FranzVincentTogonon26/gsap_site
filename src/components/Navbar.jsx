@@ -4,15 +4,22 @@ import { navLinks } from "../constant";
 
 const Navbar = () => {
 
+    const scrollToTop = () => {
+        window.scrollTo({
+        top: 0,
+        behavior: 'smooth'  
+        });
+    };
+    
     useGSAP(() => {
         const navTween = gsap.timeline({
             scrollTrigger: {
-                trigger: 'nav',
+                trigger: '#home',
                 start: 'bottom top'
             }
         });
 
-        navTween.fromTo('nav', { backgroundColor: 'transparent' }, 
+        navTween.fromTo('#home', { backgroundColor: 'transparent' }, 
             {
                 backgroundColor: '#00000050',
                 backgroundFilter: 'blur(10px)',
@@ -24,9 +31,9 @@ const Navbar = () => {
 
 
     return ( 
-        <nav>
+        <nav id="home">
             <div>
-                <a href="#home" className="flex item-center gap-2">
+                <a href="#home" className="flex item-center gap-2" onClick={scrollToTop}>
                    <img src="/images/logo.png" alt="logo" />
                    <p>Velevet Pour</p>
                 </a>
@@ -40,7 +47,7 @@ const Navbar = () => {
                     }
                 </ul>
             </div>
-            
+
         </nav>
      );
 }

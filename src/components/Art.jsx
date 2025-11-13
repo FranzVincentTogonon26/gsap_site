@@ -32,7 +32,7 @@ function Art() {
                 duration: 1,
                 ease: 'power1.inOut',
             })
-            .to('#masked-content', {
+            .to('.masked-content', {
                 opacity: 1,
                 duration: 1,
                 ease: 'power1.inOut'
@@ -43,7 +43,7 @@ function Art() {
 
   return (
     <div id="art">
-        <div className="container mx-auto h-full pt-20">
+        <div className="container mx-auto h-full pt-50">
             <h2 className="will-fade">The ART</h2>
             <div className="content">
                 <ul className="space-y-4 will-fade">
